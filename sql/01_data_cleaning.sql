@@ -2,7 +2,6 @@
 -- Author: Lawrence Kipchirchir
 -- Database: MySQL
 
-
 -- 1. Setting Up Database
 CREATE DATABASE IF NOT EXISTS uk_retail;
 USE uk_retail;
@@ -23,7 +22,7 @@ CREATE TABLE uk_retail_raw (
 
 
 -- 3. Loading Raw Data from CSV
-LOAD DATA LOCAL INFILE 'your_path.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/User/Desktop/Data Projects/Uk retail store data.csv'
 INTO TABLE uk_retail_raw
 CHARACTER SET latin1
 FIELDS TERMINATED BY ','
@@ -31,7 +30,8 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (InvoiceNo, StockCode, Description, Quantity,
- InvoiceDate, UnitPrice, CustomerID, Country);
+ InvoiceDate, @UnitPrice, CustomerID, Country)
+SET UnitPrice = NULLIF(@UnitPrice, '');
 
 
 -- 4. Fixing Date Column (converting VARCHAR to DATETIME)
@@ -49,9 +49,9 @@ SELECT
     StockCode,
     Description,
     Quantity,
-    InvoiceDate_Clean        AS InvoiceDate,
+    InvoiceDate_Clean AS InvoiceDate,
     UnitPrice,
-    (Quantity * UnitPrice)   AS Sales,
+    (Quantity * UnitPrice) AS Sales,
     CustomerID,
     Country
 FROM uk_retail_raw

@@ -27,6 +27,16 @@ SQL-based data cleaning and Tableau visualisation.
 - **Excel** — Initial data exploration
 - **Tableau** — Interactive dashboard and visualisation
 
+
+## Data Cleaning (MySQL)
+- Created a raw staging table and loaded the CSV using LOAD DATA LOCAL INFILE
+- Converted InvoiceDate from VARCHAR to DATETIME using STR_TO_DATE()
+- Derived a Sales column by multiplying Quantity by UnitPrice
+- Removed records where Quantity or UnitPrice were zero or negative
+- Excluded rows with missing CustomerID to ensure customer-level analysis accuracy
+- Exported final cleaned table as uk_retail_clean for analysis and visualisation
+
+
 ## Analysis
 - Revenue trend across 12 months
 - Sales distribution across 37 countries

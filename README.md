@@ -149,7 +149,7 @@ SQL-based data cleaning and Tableau visualisation.
 ## Recommendations
 - Focus retention efforts on the 36% new customers to grow the returning base
 - Stock up high-revenue products ahead of Q4 to capitalise on seasonal demand
-- Explore growth opportunities in Netherlands and Ireland — fastest growing
+- Explore growth opportunities in Netherlands and Ireland - fastest growing
   non-UK markets after Germany
 - Prioritise top RFM customers like 14646 and 18102 for loyalty programmes
   given their outsized contribution to total revenue

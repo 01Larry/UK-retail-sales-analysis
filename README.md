@@ -3,7 +3,7 @@
 End-to-end UK retail sales analysis using MySQL, Excel and Tableau
 
 ## Live Dashboard
-[View Interactive Dashboard](https://public.tableau.com/authoring/UKRetailSalesCustomerBehaviourdashboard/Dashboard1#1)
+[View Interactive Dashboard](https://public.tableau.com/views/UKRetailSalesCustomerBehaviourdashboard/Dashboard1)
 
 ## Dashboard Preview
 ![UK Retail Sales Dashboard](dashboard/uk_retail_dashboard.png)
